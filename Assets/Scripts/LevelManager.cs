@@ -24,16 +24,15 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        
-    }
+    
 
     public async void LoadScene(string sceneName)
     {
         var scene = SceneManager.LoadSceneAsync(sceneName);
         scene.allowSceneActivation = false;
 
+        AudioManager.instance.StopPlaying(AudioManager.instance.sounds[0].name);
+        AudioManager.instance.Play("LoadingMusic");
         _loaderCanvas.SetActive(true);
 
         do
@@ -49,5 +48,7 @@ public class LevelManager : MonoBehaviour
 
         scene.allowSceneActivation = true;
         _loaderCanvas.SetActive(false);
+        AudioManager.instance.StopPlaying("LoadingMusic");
+        AudioManager.instance.Play(AudioManager.instance.sounds[0].name);
     }
 }

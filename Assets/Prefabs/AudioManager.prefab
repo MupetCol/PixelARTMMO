@@ -44,22 +44,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 373e832c4894d33429a7f1619ad114fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  replaceTheme: 1
   sounds:
-  - name: BGMusic
+  - name: BGMusic01
     clip: {fileID: 8300000, guid: a2a1e2bfb8564424394b889bb25f016b, type: 3}
-    volume: 0.706
+    mixer: {fileID: 2328735119263106213, guid: ce4e228438184784b985c9cb554f763c, type: 2}
+    volume: 0.35
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: ButtonClick
     clip: {fileID: 8300000, guid: f90f4314562980443ac94a36e0b1c81a, type: 3}
-    volume: 1
+    mixer: {fileID: 724312598972193972, guid: ce4e228438184784b985c9cb554f763c, type: 2}
+    volume: 0.65
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: Third
-    clip: {fileID: 0}
-    volume: 1
+  - name: LoadingMusic
+    clip: {fileID: 8300000, guid: 4a1759b2ff4dbda4588384537d8b3bdf, type: 3}
+    mixer: {fileID: 2328735119263106213, guid: ce4e228438184784b985c9cb554f763c, type: 2}
+    volume: 0.65
     pitch: 1
     loop: 0
     source: {fileID: 0}

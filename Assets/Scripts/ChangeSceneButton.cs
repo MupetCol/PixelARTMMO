@@ -12,8 +12,4 @@ public class ChangeSceneButton : MonoBehaviour
         LevelManager.instance.LoadScene(sceneName);
     }
 
-    public void PlayFromAudioManager(string clipName)
-    {
-        AudioManager.instance.Play(clipName);
-    }
 }
