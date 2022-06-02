@@ -11,4 +11,5 @@ public class ChangeSceneButton : MonoBehaviour
     {
         LevelManager.instance.LoadScene(sceneName);
     }
+
 }
