@@ -60,7 +60,6 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning("Sound: " + name + "not founnd!");
             return;
         }
-        Debug.Log("Tried to play");
         s.source.Play();
     }
 
