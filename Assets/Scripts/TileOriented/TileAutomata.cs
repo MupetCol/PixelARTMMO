@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEditor;
 
-public class TileAutomata : MonoBehaviour
+public class TileAutomata : MouseRaycast
 {
     [Range(0, 100)]
     public int iniChance;
@@ -17,6 +17,10 @@ public class TileAutomata : MonoBehaviour
 
     [Range(1, 10)]
     public int numR;
+
+    public bool randomizeBottom;
+    public bool randomizeTop;
+
     private int count = 0;
 
     private int[,] terrainMap;
@@ -24,11 +28,43 @@ public class TileAutomata : MonoBehaviour
 
     public Tilemap topMap;
     public Tilemap bottomMap;
-    public Tile topTile;
-    public Tile botTile;
+    public List<Tile> topTile;
+    public List<Tile> botTile;
+
 
     int width;
     int height;
+
+    
+    private void Start()
+    {
+        
+        eve_MouseClick.AddListener(TryDelete);
+        doSim(1);
+    }
+
+    private void TryDelete()
+    {
+        Vector3Int localPos = new Vector3Int(mousePos.x - (int)topMap.layoutGrid.transform.position.x,
+        mousePos.y - (int)topMap.layoutGrid.transform.position.y, mousePos.z - (int)topMap.layoutGrid.transform.position.z);
+        if (topMap.layoutGrid.tag == "BackLayer")
+        {
+            int indexy = localPos.y < 0 ? localPos.y*-1 + height/2 : localPos.y;
+            int indexx = localPos.x < 0 ? localPos.x*-1 + width / 2 : localPos.x;
+            if (terrainMap[indexx, indexy] == -1) terrainMap[indexx, indexy] = 0;
+            else
+            {
+                topMap.SetTile(localPos, null);
+                bottomMap.SetTile(localPos, null);
+            }
+        }
+        else
+        {
+            topMap.SetTile(localPos, null);
+            bottomMap.SetTile(localPos, null);
+        }
+
+    }
 
     public void doSim(int numR)
     {
@@ -36,7 +72,8 @@ public class TileAutomata : MonoBehaviour
         width = tmapSize.x;
         height = tmapSize.y;
 
-        if(terrainMap == null)
+
+        if (terrainMap == null)
         {
             terrainMap = new int[width,height];
             initPos();
@@ -47,13 +84,37 @@ public class TileAutomata : MonoBehaviour
             terrainMap = genTilePos(terrainMap);
         }
 
+        
+        
+
         for (int x = 0; x < width; x++)
         {
             for (int y = 0; y < height; y++)
             {
-                if (terrainMap[x, y] == 1) 
-                    topMap.SetTile(new Vector3Int(-x + width / 2, -y + height / 2, 0), topTile);
-                    bottomMap.SetTile(new Vector3Int(-x + width / 2, -y + height / 2, 0), botTile);
+                if (terrainMap[x, y] == 1 && randomizeTop == false) 
+                    topMap.SetTile(new Vector3Int(-x + width / 2, -y + height / 2, 0), topTile[0]);
+                else if(terrainMap[x, y] == 1 && randomizeTop == true)
+                {
+                    int indexT = Random.Range(0, topTile.Count);
+                    topMap.SetTile(new Vector3Int(-x + width / 2, -y + height / 2, 0), topTile[indexT]);
+                }
+
+                if(randomizeBottom == false)
+                    bottomMap.SetTile(new Vector3Int(-x + width / 2, -y + height / 2, 0), botTile[0]);
+                else
+                {
+                    int indexB = Random.Range(0, botTile.Count);
+                    bottomMap.SetTile(new Vector3Int(-x + width / 2, -y + height / 2, 0), botTile[indexB]);
+                }
+
+            }
+        }
+
+        for (int x = 0; x < width; x++)
+        {
+            for (int y = 0; y < height; y++)
+            {
+                terrainMap[x, y] = -1;
             }
         }
 
@@ -122,11 +183,11 @@ public class TileAutomata : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.Z))
         {
             doSim(numR);
         }
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetKeyDown(KeyCode.X))
         {
             clearMap(true);
         }
