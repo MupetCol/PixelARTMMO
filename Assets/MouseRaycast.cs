@@ -11,7 +11,7 @@ public class MouseRaycast : MonoBehaviour
 
     protected static UnityEvent eve_MouseClick;
 
-    private void Start()
+    private void Awake()
     {
         if (eve_MouseClick == null)
             eve_MouseClick = new UnityEvent();

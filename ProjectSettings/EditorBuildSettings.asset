@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SC_Worlds.unity
     guid: ce93a5eadbe31b74eabba9156d8f41b2
+  - enabled: 1
+    path: Assets/Scenes/SC_GameWorld.unity
+    guid: 470b8f82ffd3f9d409e1d0e419f07280
   m_configObjects: {}

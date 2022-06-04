@@ -266,8 +266,8 @@ PolygonCollider2D:
     - - {x: 15.926016, y: 45.5389}
       - {x: -0.4184866, y: 45.05444}
       - {x: -101.62827, y: 45.056107}
-      - {x: -99.55579, y: -20.594221}
-      - {x: 139.1242, y: -19.9762}
+      - {x: -99.55579, y: -27.877705}
+      - {x: 145.49725, y: -28.352203}
       - {x: 147.79669, y: 47.64737}
 --- !u!4 &232906468
 Transform:
@@ -1019,8 +1019,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85539f290f95d684fa19669fa603c79d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementSpeed: 25
-  JumpForce: 25
+  MovementSpeed: 10
+  JumpForce: 10
 --- !u!50 &974124949
 Rigidbody2D:
   serializedVersion: 4
@@ -1212,7 +1212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: 0, y: 0, z: -10}
+  m_FollowOffset: {x: 0, y: 5, z: -10}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -1498,14 +1498,14 @@ MonoBehaviour:
   m_Follow: {fileID: 974124952}
   m_Lens:
     FieldOfView: 131
-    OrthographicSize: 26
+    OrthographicSize: 29
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7768116, y: 1}
+    m_SensorSize: {x: 1.7795527, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1522,7 +1522,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1202815438}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.31, y: 21.33, z: -10}
+  m_LocalPosition: {x: 8.31, y: 26.33, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2192,6 +2192,50 @@ Transform:
   - {fileID: 1815009381}
   m_Father: {fileID: 669283367}
   m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1546133018
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1546133020}
+  - component: {fileID: 1546133019}
+  m_Layer: 0
+  m_Name: WordlReseter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1546133019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1546133018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 601e1d5e85a3d184aaaa457bf7d2ea89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1546133020
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1546133018}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 278.6839, y: 141.73181, z: -0.09434739}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1603372368
 GameObject:
@@ -3121,7 +3165,7 @@ Camera:
   far clip plane: 1000
   field of view: 131
   orthographic: 1
-  orthographic size: 26
+  orthographic size: 29
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3145,7 +3189,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2048726964}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.274004, y: 25.7304, z: -10}
+  m_LocalPosition: {x: 8.31, y: 26.33, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3218,7 +3262,79 @@ MonoBehaviour:
       m_Calls: []
   m_CameraActivatedEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 427906523}
+        m_TargetAssemblyTypeName: TileAutomata, Assembly-CSharp
+        m_MethodName: doSim
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 427906527}
+        m_TargetAssemblyTypeName: TileAutomata, Assembly-CSharp
+        m_MethodName: doSim
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 427906526}
+        m_TargetAssemblyTypeName: TileAutomata, Assembly-CSharp
+        m_MethodName: doSim
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 427906525}
+        m_TargetAssemblyTypeName: TileAutomata, Assembly-CSharp
+        m_MethodName: doSim
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 427906528}
+        m_TargetAssemblyTypeName: TileAutomata, Assembly-CSharp
+        m_MethodName: doSim
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 427906529}
+        m_TargetAssemblyTypeName: TileAutomata, Assembly-CSharp
+        m_MethodName: doSim
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2084489828
 GameObject:
   m_ObjectHideFlags: 0

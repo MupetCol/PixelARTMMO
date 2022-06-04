@@ -38,9 +38,7 @@ public class TileAutomata : MouseRaycast
     
     private void Start()
     {
-        
         eve_MouseClick.AddListener(TryDelete);
-        doSim(1);
     }
 
     private void TryDelete()
