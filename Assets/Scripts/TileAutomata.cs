@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEditor;
 
-public class TileAutomata : MouseRaycast
+public class TileAutomata : MonoBehaviour
 {
     [Range(0, 100)]
     public int iniChance;
@@ -21,8 +21,6 @@ public class TileAutomata : MouseRaycast
     public bool randomizeBottom;
     public bool randomizeTop;
 
-    private int count = 0;
-
     private int[,] terrainMap;
     public Vector3Int tmapSize;
 
@@ -38,29 +36,34 @@ public class TileAutomata : MouseRaycast
     
     private void Start()
     {
-        eve_MouseClick.AddListener(TryDelete);
+        MouseRaycast.instance.eve_MouseClick.AddListener(TryDelete);
     }
 
     private void TryDelete()
     {
-        Vector3Int localPos = new Vector3Int(mousePos.x - (int)topMap.layoutGrid.transform.position.x,
-        mousePos.y - (int)topMap.layoutGrid.transform.position.y, mousePos.z - (int)topMap.layoutGrid.transform.position.z);
-        if (topMap.layoutGrid.tag == "BackLayer")
+        Vector3Int localPos = new Vector3Int(MouseRaycast.instance.mousePos.x - (int)topMap.layoutGrid.transform.position.x,
+        MouseRaycast.instance.mousePos.y - (int)topMap.layoutGrid.transform.position.y, MouseRaycast.instance.mousePos.z - (int)topMap.layoutGrid.transform.position.z);
+
+        if (topMap.GetTile(localPos) != null || bottomMap.GetTile(localPos) != null)
         {
-            int indexy = localPos.y < 0 ? localPos.y*-1 + height/2 : localPos.y;
-            int indexx = localPos.x < 0 ? localPos.x*-1 + width / 2 : localPos.x;
-            if (terrainMap[indexx, indexy] == -1) terrainMap[indexx, indexy] = 0;
+            if (topMap.layoutGrid.tag == "BackLayer")
+            {
+                int indexy = localPos.y < 0 ? localPos.y * -1 + height / 2 : localPos.y;
+                int indexx = localPos.x < 0 ? localPos.x * -1 + width / 2 : localPos.x;
+                if (terrainMap[indexx, indexy] == -1) terrainMap[indexx, indexy] = 0;
+                else
+                {
+                    topMap.SetTile(localPos, null);
+                    bottomMap.SetTile(localPos, null);
+                }
+            }
             else
             {
                 topMap.SetTile(localPos, null);
                 bottomMap.SetTile(localPos, null);
             }
         }
-        else
-        {
-            topMap.SetTile(localPos, null);
-            bottomMap.SetTile(localPos, null);
-        }
+
 
     }
 

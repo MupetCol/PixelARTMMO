@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: AT_Well
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: 458975323, guid: 59b1074b7cecf68459d09e20b26dd483, type: 3}
-  - {fileID: -1033991797, guid: 59b1074b7cecf68459d09e20b26dd483, type: 3}
-  - {fileID: -40743797, guid: 59b1074b7cecf68459d09e20b26dd483, type: 3}
-  - {fileID: -1524290319, guid: 59b1074b7cecf68459d09e20b26dd483, type: 3}
+  - {fileID: 2955286255927101427, guid: 59b1074b7cecf68459d09e20b26dd483, type: 3}
+  - {fileID: 1013516806, guid: 59b1074b7cecf68459d09e20b26dd483, type: 3}
+  - {fileID: -1416495323, guid: 59b1074b7cecf68459d09e20b26dd483, type: 3}
+  - {fileID: -1573973013, guid: 59b1074b7cecf68459d09e20b26dd483, type: 3}
   m_MinSpeed: 5
   m_MaxSpeed: 5
   m_AnimationStartTime: 0

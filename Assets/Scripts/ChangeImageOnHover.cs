@@ -6,18 +6,6 @@ using UnityEngine.EventSystems;
 
 public class ChangeImageOnHover : Selectable, IPointerClickHandler
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void Deselect()
     {
         this.DoStateTransition(SelectionState.Disabled,true);

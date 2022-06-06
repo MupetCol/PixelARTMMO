@@ -26,8 +26,9 @@ public class TileOneRowOneTile : MonoBehaviour
     {
         Vector3Int localPos = new Vector3Int(MouseRaycast.instance.mousePos.x - (int)map.layoutGrid.transform.position.x,
         MouseRaycast.instance.mousePos.y - (int)map.layoutGrid.transform.position.y, MouseRaycast.instance.mousePos.z - (int)map.layoutGrid.transform.position.z);
-        if (localPos.x < width && localPos.y < height)
+        if (map.GetTile(localPos) != null)
         {
+
             map.SetTile(localPos, null);
         }
             

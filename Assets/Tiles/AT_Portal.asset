@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: AT_Portal
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: 1746719969, guid: 2060c5a9e9192fc49827f3416c86d29e, type: 3}
-  - {fileID: -1838896580, guid: 2060c5a9e9192fc49827f3416c86d29e, type: 3}
-  - {fileID: -145699856, guid: 2060c5a9e9192fc49827f3416c86d29e, type: 3}
-  - {fileID: 852504758, guid: 2060c5a9e9192fc49827f3416c86d29e, type: 3}
-  - {fileID: 1930974732, guid: 2060c5a9e9192fc49827f3416c86d29e, type: 3}
+  - {fileID: 2189510010676529607, guid: 2060c5a9e9192fc49827f3416c86d29e, type: 3}
+  - {fileID: -361590770, guid: 2060c5a9e9192fc49827f3416c86d29e, type: 3}
+  - {fileID: -1009870048, guid: 2060c5a9e9192fc49827f3416c86d29e, type: 3}
+  - {fileID: 838549154, guid: 2060c5a9e9192fc49827f3416c86d29e, type: 3}
+  - {fileID: -249114920, guid: 2060c5a9e9192fc49827f3416c86d29e, type: 3}
   m_MinSpeed: 5
   m_MaxSpeed: 5
   m_AnimationStartTime: 0
