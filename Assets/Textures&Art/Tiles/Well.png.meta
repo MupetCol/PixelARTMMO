@@ -124,7 +124,7 @@ TextureImporter:
         width: 23
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -136,10 +136,73 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Well_1
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 39
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e5248cba3f9a4040bb688e2398c97fd
+      internalID: 1013516806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Well_2
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 39
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e8bf2cbf43306c478f566fd87cfdb1d
+      internalID: -1416495323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Well_3
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 5
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6c2b2bb94e144541bcd27f0b6249cb5
+      internalID: -1573973013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 0230188bc0af2a84fa32d836dc790f8f
     internalID: 0
     vertices: []
     indices: 
@@ -148,6 +211,9 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Well_0: 2955286255927101427
+      Well_1: 1013516806
+      Well_3: -1573973013
+      Well_2: -1416495323
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
