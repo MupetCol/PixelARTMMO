@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class WorldsButtonsUIChanger : MonoBehaviour
+public class WorldsButtonsUIManager : MonoBehaviour
 {
     public GameObject favorite, recent, day;
     private Button favoriteWorldButton, recentWorldButton, dayWorldButton;
