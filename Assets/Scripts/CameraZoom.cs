@@ -5,8 +5,8 @@ using Cinemachine;
 
 public class CameraZoom : MonoBehaviour
 {
-    float minFov  = 10f;
-    float maxFov  = 29f;
+    public float minFov  = 5f;
+    public float maxFov  = 20f;
     float sensitivity  = 10f;
     CinemachineVirtualCamera virtualCamera;
 
