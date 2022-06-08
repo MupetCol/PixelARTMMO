@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public Character2DController controller;
+    public Animator animator;
 
     public float runSpeed = 40f;
 
@@ -17,26 +18,28 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
-       
+
         if (Input.GetButtonDown("Jump")) jump = true;
-        
+
 
 
         if (Input.GetButtonDown("Crouch"))
         {
             crouch = true;
-        } else if (Input.GetButtonUp("Crouch")) 
+        }
+        else if (Input.GetButtonUp("Crouch"))
         {
             crouch = false;
         }
 
     }
 
-    private void FixedUpdate()  
+    private void FixedUpdate()
     // Apply input to player physics on FixedUpdate
     {
-        controller.Move(horizontalMove * Time.fixedDeltaTime,crouch,jump);
+        controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
         jump = false;
     }
 
