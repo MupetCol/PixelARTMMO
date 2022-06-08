@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f3eab9d052c060242ae361f6e1ea9350
+guid: 472a1db241c350a4f8a5c5359ff174f7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,7 +69,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -116,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Running_Shadow_0
+      name: Complete_0
       rect:
         serializedVersion: 2
         x: 23
-        y: 84
-        width: 17
-        height: 2
+        y: 82
+        width: 18
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 414204d368bb27d4280cc82f4e454b44
-      internalID: -174065956
+      spriteID: b2483b38bad732f4e917e73da29fe130
+      internalID: -30842232
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Running_Shadow_1
+      name: Complete_1
       rect:
         serializedVersion: 2
         x: 87
-        y: 84
+        y: 82
         width: 17
-        height: 2
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,20 +151,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47046d3f72079bc4b900463c03423259
-      internalID: 782660604
+      spriteID: 2bd284b050486ca45b09e02609f7eac9
+      internalID: -295115026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Running_Shadow_2
+      name: Complete_2
       rect:
         serializedVersion: 2
         x: 151
-        y: 84
+        y: 82
         width: 17
-        height: 2
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,20 +172,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71af078056faf0445843aabc42c62833
-      internalID: 1540232691
+      spriteID: b39b07ce939efa447b0b66c44b055b6d
+      internalID: -679934511
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Running_Shadow_3
+      name: Complete_3
       rect:
         serializedVersion: 2
         x: 215
-        y: 84
-        width: 17
-        height: 2
+        y: 82
+        width: 19
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,41 +193,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75eea54c08a36ab40bf7f2c414276f41
-      internalID: -403538670
+      spriteID: 09a9142642e7c4d48ace6a7cf7209cad
+      internalID: -549583453
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Running_Shadow_4
-      rect:
-        serializedVersion: 2
-        x: 87
-        y: 20
-        width: 17
-        height: 2
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a492f44bb4ee37f4e92bc27f8e1adc14
-      internalID: -299734393
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Running_Shadow_5
+      name: Complete_4
       rect:
         serializedVersion: 2
         x: 23
-        y: 20
+        y: 18
         width: 17
-        height: 2
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,8 +214,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6670473382887ce4e9c817b0ba297d17
-      internalID: -624454085
+      spriteID: 8c165dcdb502df144b983dd297796576
+      internalID: -870914178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Complete_5
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 18
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9adc81525eea824ba3c0a1a1f8c1660
+      internalID: -154838824
       vertices: []
       indices: 
       edges: []
@@ -244,7 +244,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: b3d5af3ebeb28b149bab9c054163e04e
     internalID: 0
     vertices: []
     indices: 
@@ -252,12 +252,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Running_Shadow_3: 1540232691
-      Running_Shadow_0: 302613346
-      Running_Shadow_2: 782660604
-      Running_Shadow_5: -299734393
-      Running_Shadow_4: -403538670
-      Running_Shadow_1: -174065956
+      Complete_2: -679934511
+      Complete_4: -870914178
+      Complete_0: -30842232
+      Complete_5: -154838824
+      Complete_1: -295115026
+      Complete_3: -549583453
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
