@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 890f222f342dce1448eeea4d2aad390f
+guid: 58d74f53e5446934b958ffa9eefa3375
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,127 +116,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Running_ForeArm_0
-      rect:
-        serializedVersion: 2
-        x: 33
-        y: 98
-        width: 8
-        height: 6
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 71de377617bb12447a17622bcef727d7
-      internalID: -754103459
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Running_ForeArm_1
-      rect:
-        serializedVersion: 2
-        x: 95
-        y: 97
-        width: 7
-        height: 3
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dcfe08d9efbd42f4ba90d5d63896a5e0
-      internalID: 1144145539
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Running_ForeArm_2
+      name: PurpleTorso_0
       rect:
         serializedVersion: 2
         x: 30
-        y: 35
-        width: 9
-        height: 3
+        y: 97
+        width: 6
+        height: 10
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fee4d9826dbba146b845a6d509d2f91
-      internalID: 1950190493
+      spriteID: e66ec69c1757daf4582193320b382fed
+      internalID: -784122858
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Running_ForeArm_3
+      name: PurpleTorso_1
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 95
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12a5d06b711802349af0e074a323e81b
+      internalID: -1816505051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PurpleTorso_2
       rect:
         serializedVersion: 2
         x: 158
-        y: 98
-        width: 9
-        height: 3
+        y: 96
+        width: 7
+        height: 9
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 121b820e10e64a14ea00f501f2d08159
-      internalID: 1184622917
+      spriteID: 64baff395b810f44f84d98e4859cd03c
+      internalID: 1578179432
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Running_ForeArm_4
+      name: PurpleTorso_3
       rect:
         serializedVersion: 2
-        x: 218
-        y: 97
-        width: 16
-        height: 6
+        x: 222
+        y: 96
+        width: 8
+        height: 10
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa6fa1fa7b3a7ce43ba8d09943db2c22
-      internalID: -1127808577
+      spriteID: ec146ae2c282b534587739e8b1159153
+      internalID: -241206608
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Running_ForeArm_5
+      name: PurpleTorso_4
       rect:
         serializedVersion: 2
-        x: 96
+        x: 30
+        y: 32
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c83a86ddbeeb0042bba641570c59f7f
+      internalID: -1716901593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PurpleTorso_5
+      rect:
+        serializedVersion: 2
+        x: 95
         y: 32
         width: 6
-        height: 3
+        height: 9
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b864f38a5477ee49aabe9e0f54f659f
-      internalID: -45829958
+      spriteID: 2a5866683e2060d4280192f446aa4c3d
+      internalID: -36203841
       vertices: []
       indices: 
       edges: []
@@ -244,7 +244,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: b062b8310ca64664d8c8ff4b2d543056
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -252,12 +252,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Running_ForeArm_1: 1144145539
-      Running_ForeArm_5: -45829958
-      Running_ForeArm_3: 1184622917
-      Running_ForeArm_4: -1127808577
-      Running_ForeArm_0: -754103459
-      Running_ForeArm_2: 1950190493
+      PurpleTorso_1: -1816505051
+      PurpleTorso_3: -241206608
+      PurpleTorso_2: 1578179432
+      PurpleTorso_4: -1716901593
+      PurpleTorso_0: -784122858
+      PurpleTorso_5: -36203841
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
