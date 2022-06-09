@@ -17,6 +17,7 @@ public class TileAutomata : MonoBehaviour
 
     [Range(1, 10)]
     public int numR;
+    private int count = 0;
 
     public bool randomizeBottom;
     public bool randomizeTop;
@@ -36,36 +37,36 @@ public class TileAutomata : MonoBehaviour
     
     private void Start()
     {
-        MouseRaycast.instance.eve_MouseClick.AddListener(TryDelete);
+        //MouseRaycast.instance.eve_MouseClick.AddListener(TryDelete);
     }
 
-    private void TryDelete()
-    {
-        Vector3Int localPos = new Vector3Int(MouseRaycast.instance.mousePos.x - (int)topMap.layoutGrid.transform.position.x,
-        MouseRaycast.instance.mousePos.y - (int)topMap.layoutGrid.transform.position.y, MouseRaycast.instance.mousePos.z - (int)topMap.layoutGrid.transform.position.z);
+    //private void TryDelete()
+    //{
+    //    Vector3Int localPos = new Vector3Int(MouseRaycast.instance.mousePos.x - (int)topMap.layoutGrid.transform.position.x,
+    //    MouseRaycast.instance.mousePos.y - (int)topMap.layoutGrid.transform.position.y, MouseRaycast.instance.mousePos.z - (int)topMap.layoutGrid.transform.position.z);
 
-        if (topMap.GetTile(localPos) != null || bottomMap.GetTile(localPos) != null)
-        {
-            if (topMap.layoutGrid.tag == "BackLayer")
-            {
-                int indexy = localPos.y < 0 ? localPos.y * -1 + height / 2 : localPos.y;
-                int indexx = localPos.x < 0 ? localPos.x * -1 + width / 2 : localPos.x;
-                if (terrainMap[indexx, indexy] == -1) terrainMap[indexx, indexy] = 0;
-                else
-                {
-                    topMap.SetTile(localPos, null);
-                    bottomMap.SetTile(localPos, null);
-                }
-            }
-            else
-            {
-                topMap.SetTile(localPos, null);
-                bottomMap.SetTile(localPos, null);
-            }
-        }
+    //    if (topMap.GetTile(localPos) != null || bottomMap.GetTile(localPos) != null)
+    //    {
+    //        if (topMap.layoutGrid.tag == "BackLayer")
+    //        {
+    //            int indexy = localPos.y < 0 ? localPos.y * -1 + height / 2 : localPos.y;
+    //            int indexx = localPos.x < 0 ? localPos.x * -1 + width / 2 : localPos.x;
+    //            if (terrainMap[indexx, indexy] == -1) terrainMap[indexx, indexy] = 0;
+    //            else
+    //            {
+    //                topMap.SetTile(localPos, null);
+    //                bottomMap.SetTile(localPos, null);
+    //            }
+    //        }
+    //        else
+    //        {
+    //            topMap.SetTile(localPos, null);
+    //            bottomMap.SetTile(localPos, null);
+    //        }
+    //    }
 
 
-    }
+    //}
 
     public void doSim(int numR)
     {
@@ -92,32 +93,39 @@ public class TileAutomata : MonoBehaviour
         {
             for (int y = 0; y < height; y++)
             {
-                if (terrainMap[x, y] == 1 && randomizeTop == false) 
-                    topMap.SetTile(new Vector3Int(-x + width / 2, -y + height / 2, 0), topTile[0]);
-                else if(terrainMap[x, y] == 1 && randomizeTop == true)
+                if (terrainMap[x, y] == 1 /*&& randomizeTop == false*/)
                 {
-                    int indexT = Random.Range(0, topTile.Count);
-                    topMap.SetTile(new Vector3Int(-x + width / 2, -y + height / 2, 0), topTile[indexT]);
+                    topMap.SetTile(new Vector3Int(-x + width / 2, -y + height / 2, 0), topTile[0]);
                 }
-
-                if(randomizeBottom == false)
-                    bottomMap.SetTile(new Vector3Int(-x + width / 2, -y + height / 2, 0), botTile[0]);
                 else
                 {
-                    int indexB = Random.Range(0, botTile.Count);
-                    bottomMap.SetTile(new Vector3Int(-x + width / 2, -y + height / 2, 0), botTile[indexB]);
+                    bottomMap.SetTile(new Vector3Int(-x + width / 2, -y + height / 2, 0), botTile[0]);
                 }
+  
+                //else if(terrainMap[x, y] == 1 && randomizeTop == true)
+                //{
+                //    int indexT = Random.Range(0, topTile.Count);
+                //    topMap.SetTile(new Vector3Int(-x + width / 2, -y + height / 2, 0), topTile[indexT]);
+                //}
+
+                //if(randomizeBottom == false)
+                //    bottomMap.SetTile(new Vector3Int(-x + width / 2, -y + height / 2, 0), botTile[0]);
+                //else
+                //{
+                //    int indexB = Random.Range(0, botTile.Count);
+
+                //}
 
             }
         }
 
-        for (int x = 0; x < width; x++)
-        {
-            for (int y = 0; y < height; y++)
-            {
-                terrainMap[x, y] = -1;
-            }
-        }
+        //for (int x = 0; x < width; x++)
+        //{
+        //    for (int y = 0; y < height; y++)
+        //    {
+        //        terrainMap[x, y] = -1;
+        //    }
+        //}
 
     }
 
