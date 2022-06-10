@@ -13153,6 +13153,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &1857373132 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 433394205932589612, guid: 6b6c945f3b06c9c458b31e8e3993c4b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 433394204974520138}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b113ac1a9656473448a3da4233dcfe76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1880172790
 GameObject:
   m_ObjectHideFlags: 0
@@ -14095,79 +14107,7 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: TileAutomata, Assembly-CSharp
-        m_MethodName: doSim
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: TileAutomata, Assembly-CSharp
-        m_MethodName: doSim
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: TileAutomata, Assembly-CSharp
-        m_MethodName: doSim
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: TileAutomata, Assembly-CSharp
-        m_MethodName: doSim
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: TileAutomata, Assembly-CSharp
-        m_MethodName: doSim
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: TileAutomata, Assembly-CSharp
-        m_MethodName: doSim
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1984845682}
         m_TargetAssemblyTypeName: TileOneRowOneTile, Assembly-CSharp
         m_MethodName: AnimTileGen
         m_Mode: 1
@@ -14179,7 +14119,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1984845682}
+      - m_Target: {fileID: 1857373132}
         m_TargetAssemblyTypeName: TileOneRowOneTile, Assembly-CSharp
         m_MethodName: AnimTileGen
         m_Mode: 1
@@ -14687,6 +14627,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 433394205280583736, guid: 6b6c945f3b06c9c458b31e8e3993c4b0,
+        type: 3}
+      propertyPath: mapSize.x
+      value: 70
+      objectReference: {fileID: 0}
     - target: {fileID: 433394205285995104, guid: 6b6c945f3b06c9c458b31e8e3993c4b0,
         type: 3}
       propertyPath: m_RootOrder

@@ -1,5 +1,51 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &112106161
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 112106163}
+  - component: {fileID: 112106162}
+  m_Layer: 0
+  m_Name: Decoratives
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &112106163
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112106161}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 433394206154369974}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &112106162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112106161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cee55cc77db559349b9d2e13c62b932c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilemaps: {fileID: 433394204904627391}
+  tilemapFrontLayer: []
 --- !u!1 &433394204178175108
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,7 +386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilemaps: {fileID: 433394204843101842}
-  tilemapFrontLayer: {fileID: 0}
+  tilemapFrontLayer: []
 --- !u!1 &433394204620462925
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,7 +702,7 @@ GameObject:
   - component: {fileID: 433394204904627391}
   - component: {fileID: 433394204904627390}
   m_Layer: 0
-  m_Name: Flowers1
+  m_Name: Decoratives
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1380,6 +1426,7 @@ MonoBehaviour:
   - {fileID: 433394205939441770}
   - {fileID: 433394205727896435}
   - {fileID: 433394204595829452}
+  - {fileID: 112106162}
 --- !u!1 &433394205445585220
 GameObject:
   m_ObjectHideFlags: 0
@@ -1538,7 +1585,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -5
+  m_SortingOrder: 132
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -1761,7 +1808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilemaps: {fileID: 433394205470450309}
-  tilemapFrontLayer: {fileID: 0}
+  tilemapFrontLayer: []
 --- !u!1 &433394205806437149
 GameObject:
   m_ObjectHideFlags: 0
@@ -1822,7 +1869,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileMap: {fileID: 433394204431774291}
   tile: {fileID: 11400000, guid: d71909d9a2397a141a25a083d9789670, type: 2}
-  tmapSize: {x: 80, y: 1, z: 0}
+  tmapSize: {x: 80, y: 5, z: 0}
   sandClumpsQuantity: 3
 --- !u!1 &433394205863227292
 GameObject:
@@ -2020,12 +2067,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iniChance: 40
-  birthLimit: 3
-  deathLimit: 2
-  numR: 2
+  birthLimit: 4
+  deathLimit: 3
+  numR: 3
   randomizeBottom: 0
   randomizeTop: 0
-  tmapSize: {x: 80, y: 10, z: 0}
+  tmapSize: {x: 80, y: 11, z: 0}
   topMap: {fileID: 433394204709455056}
   bottomMap: {fileID: 433394204843101842}
   topTile:
@@ -2245,7 +2292,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilemaps: {fileID: 433394205987932021}
-  tilemapFrontLayer: {fileID: 433394205470450309}
+  tilemapFrontLayer:
+  - {fileID: 433394205470450309}
+  - {fileID: 433394204843101842}
 --- !u!1 &433394205978528080
 GameObject:
   m_ObjectHideFlags: 0
@@ -2454,11 +2503,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90bfb5a81a8cb344ca8b036216cf15f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainTileMap: {fileID: 433394205987932021}
+  mainTileMap: {fileID: 433394204904627391}
   mapsToUnify:
-  - {fileID: 433394204904627391}
   - {fileID: 433394205154727288}
-  - {fileID: 433394206196067628}
   mapsToIsolate: []
 --- !u!1 &433394206154369969
 GameObject:
@@ -2491,6 +2538,7 @@ Transform:
   - {fileID: 433394205727896434}
   - {fileID: 433394205939441749}
   - {fileID: 433394204595829455}
+  - {fileID: 112106163}
   m_Father: {fileID: 433394205285995104}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

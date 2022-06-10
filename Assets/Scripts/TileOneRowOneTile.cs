@@ -17,10 +17,6 @@ public class TileOneRowOneTile : MonoBehaviour
 
 
 
-    private void Start()
-    {
-    }
-
     public void TileGen()
     {
         width = mapSize.x;
