@@ -25,7 +25,8 @@ public class GameFlowManager : MonoBehaviour
             unifier.Unify();
         }
         unifiers[0].Isolate();
-        foreach(var manager in hitManagers)
+        yield return new WaitForSeconds(.25f);
+        foreach (var manager in hitManagers)
         {
             manager.AssignHitResistance();
         }

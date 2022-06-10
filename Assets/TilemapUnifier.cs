@@ -56,10 +56,13 @@ public class TilemapUnifier : MonoBehaviour
             bounds = mapsToIsolate[i].cellBounds;
             foreach (var cell in bounds.allPositionsWithin)
             {
-                Vector3Int offsetConversion = Vector3Int.FloorToInt(mapsToIsolate[i].layoutGrid.transform.position);
+                Vector3 offsetsSubt = new Vector3(mapsToIsolate[i].layoutGrid.transform.position.x - mainTileMap.layoutGrid.transform.position.x,
+                    mapsToIsolate[i].layoutGrid.transform.position.y - mainTileMap.layoutGrid.transform.position.y,
+                    mapsToIsolate[i].layoutGrid.transform.position.z - mainTileMap.layoutGrid.transform.position.z);
+                Vector3Int offsetConversionOtherMap = Vector3Int.FloorToInt(offsetsSubt);
                 if (mapsToIsolate[i].GetTile(cell) != null)
                 {
-                    mainTileMap.SetTile(cell + offsetConversion, null);
+                    mainTileMap.SetTile(cell + offsetConversionOtherMap, null);
                 }
             }
         }
