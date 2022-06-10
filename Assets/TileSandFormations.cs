@@ -13,16 +13,10 @@ public class TileSandFormations : MonoBehaviour
     void Start()
     {
         myB = new BoundsInt(-2, -2, 0, 5, 3, 1);
+        GenerateSand();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            GenerateSand();
-        }
-    }
+
 
     void GenerateSand()
     {

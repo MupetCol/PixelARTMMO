@@ -6,8 +6,9 @@ using UnityEngine.Events;
 public class MouseRaycast : MonoBehaviour
 {
     //Mouse Position
-    [SerializeField] private Camera mainCamera;
-    public Vector3Int mousePos;
+    public Vector3Int mousePos { get { return MousePos; } private set { MousePos = value; } }
+    [SerializeField]
+    private Vector3Int MousePos;
 
     public UnityEvent eve_MouseClick;
 
@@ -34,9 +35,8 @@ public class MouseRaycast : MonoBehaviour
             eve_MouseClick.Invoke();
         }
 
-        Vector3 mouseWolrdPosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-        mouseWolrdPosition.z = 0f;
-        mousePos = Vector3Int.FloorToInt(mouseWolrdPosition);
+        Vector3 mouseWolrdPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePos = Vector3Int.FloorToInt(new Vector3(mouseWolrdPosition.x, mouseWolrdPosition.y,0));
 
     }
 }

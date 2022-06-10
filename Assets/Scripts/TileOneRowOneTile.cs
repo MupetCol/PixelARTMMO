@@ -19,19 +19,6 @@ public class TileOneRowOneTile : MonoBehaviour
 
     private void Start()
     {
-        MouseRaycast.instance.eve_MouseClick.AddListener(TryDelete);
-    }
-
-    private void TryDelete()
-    {
-        Vector3Int localPos = new Vector3Int(MouseRaycast.instance.mousePos.x - (int)map.layoutGrid.transform.position.x,
-        MouseRaycast.instance.mousePos.y - (int)map.layoutGrid.transform.position.y, MouseRaycast.instance.mousePos.z - (int)map.layoutGrid.transform.position.z);
-        if (map.GetTile(localPos) != null)
-        {
-
-            map.SetTile(localPos, null);
-        }
-            
     }
 
     public void TileGen()

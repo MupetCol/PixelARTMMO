@@ -7,7 +7,6 @@ public class TilemapUnifier : MonoBehaviour
 {
     public Tilemap mainTileMap;
     public Tilemap[] mapsToUnify;
-    public Tile[] respectiveTileUnify;
 
     public Tilemap[] mapsToIsolate;
     BoundsInt bounds;
@@ -19,35 +18,38 @@ public class TilemapUnifier : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             Unify();
         }
 
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetKeyDown(KeyCode.O))
         {
             Isolate();
         }
     }
 
-    void Unify()
+    public void Unify()
     {
         for (int i = 0; i < mapsToUnify.Length; i++)
         {
             bounds = mapsToUnify[i].cellBounds;
             foreach(var cell in bounds.allPositionsWithin)
             {
-                Vector3Int offsetConversion = Vector3Int.FloorToInt(mapsToUnify[i].layoutGrid.transform.position);
+                Vector3 offsetsSubt = new Vector3(mapsToUnify[i].layoutGrid.transform.position.x - mainTileMap.layoutGrid.transform.position.x,
+                    mapsToUnify[i].layoutGrid.transform.position.y - mainTileMap.layoutGrid.transform.position.y,
+                    mapsToUnify[i].layoutGrid.transform.position.z - mainTileMap.layoutGrid.transform.position.z);
+                Vector3Int offsetConversionOtherMap = Vector3Int.FloorToInt(offsetsSubt);
                 if (mapsToUnify[i].GetTile(cell) != null)
-                {  
-                    mainTileMap.SetTile(cell+offsetConversion, respectiveTileUnify[i]);
+                {
+                    mainTileMap.SetTile(cell+ offsetConversionOtherMap, mapsToUnify[i].GetTile(cell));
                 }
             }
             Destroy(mapsToUnify[i].gameObject);
         }
     }
 
-    void Isolate()
+    public void Isolate()
     {
         for (int i = 0; i < mapsToIsolate.Length; i++)
         {
