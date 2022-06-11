@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private Character2DController controller;
+    public Character2DController controller;
     private Animator[] animators;
     [SerializeField] Image left, right, jumpS, punch;
     [SerializeField] Sprite leftPressed, rightPressed, jumpPressed, punchPressed;
@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public float horizontalMove = 0;
     public bool jump = false;
 
-    private bool usingButton = false;
+    public bool usingButton = false;
 
     bool crouch = false;
 
